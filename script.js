@@ -2,6 +2,16 @@ let userChoice = [];
 
 let gameBoardArray = document.querySelectorAll(".gameBoarditem");
 
+let check = () => {
+  if (
+    userChoice.includes("div1") &&
+    userChoice.includes("div2") &&
+    userChoice.includes("div3")
+  ) {
+    console.log("win");
+  }
+};
+
 let userChosenDiv = gameBoardArray.forEach(function (div) {
   let click = 0;
   console.log(click);
@@ -17,5 +27,7 @@ let userChosenDiv = gameBoardArray.forEach(function (div) {
     } else {
       div.removeEventListener("click", userChosenDiv);
     }
+
+    check(userChoice);
   });
 });
