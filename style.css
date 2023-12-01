@@ -10,7 +10,6 @@
 #gameBoard {
   height: 50%;
   width: 50%;
-  border: 1px solid black;
   margin: 50px auto;
   display: flex;
   flex-direction: row;
@@ -25,7 +24,6 @@
 .gameBoarditem {
   text-align: center;
   border: 1px solid red;
-
   height: 175px;
   width: 175px;
 }

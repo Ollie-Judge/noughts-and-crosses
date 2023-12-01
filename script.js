@@ -10,7 +10,10 @@ let userChosenDiv = gameBoardArray.forEach(function (div) {
       click = 1;
       console.log(click);
       div.innerHTML = "Hello World";
-      console.log("click");
+      let chosenDivId = div.getAttribute("id");
+      userChoice.push(chosenDivId);
+      console.log(userChoice);
+      console.log("click", chosenDivId);
     } else {
       div.removeEventListener("click", userChosenDiv);
     }
