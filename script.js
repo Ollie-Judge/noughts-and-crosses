@@ -4,15 +4,19 @@ let computerChoiceArray = [];
 
 const generateComputerChoice = () => {
   let computerChoice = Math.floor(Math.random() * 9 + 1);
-  computerChoiceArray.push("div" + computerChoice);
-  console.log(computerChoiceArray);
-  outputComputerChoice();
+  if (
+    userChoice.includes(computerChoice) &&
+    computerChoiceArray.includes(computerChoice)
+  ) {
+    generateComputerChoice();
+  } else {
+    computerChoiceArray.push("div" + computerChoice);
+    console.log(computerChoiceArray);
+    outputComputerChoice();
+  }
 };
 
 const outputComputerChoice = () => {
-  if (userChoice.includes(computerChoiceArray.at(-1))) {
-    generateComputerChoice();
-  }
   // get the last item in the computer choice array, everytime the user clicks a div
   console.log("computer output" + computerChoiceArray.at(-1));
   let selectedDiv = document.getElementById(computerChoiceArray.at(-1));
