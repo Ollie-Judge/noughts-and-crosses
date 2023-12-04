@@ -18,12 +18,12 @@
 .gameBoardRow {
   width: 100%;
   height: 100%;
-  justify-content: center;
 }
 
 .gameBoarditem {
   text-align: center;
   border: 1px solid red;
+  margin: 0;
   height: 175px;
   width: 175px;
 }
